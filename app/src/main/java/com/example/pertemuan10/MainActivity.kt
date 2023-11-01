@@ -3,7 +3,9 @@ package com.example.pertemuan10
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.pertemuan10.databinding.ActivityMainBinding
 import com.example.pertemuan10.databinding.ItemRestaurantBinding
 
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         with(binding){
             rvRestaurant.apply {
                 adapter = adapterRestaurant
+//                layoutManager = GridLayoutManager(this@MainActivity, 2)
                 layoutManager = LinearLayoutManager(this@MainActivity)
             }
         }
@@ -33,7 +36,11 @@ class MainActivity : AppCompatActivity() {
             Restaurant(name = "Sindoro Sumbing", type = "Wonosobo"),
             Restaurant(name = "McDonalds", type = "Mamarika"),
             Restaurant(name = "Rukira Nashimura", type = "Nipon"),
-            Restaurant(name = "Holand Bakery", type = "Londo")
+            Restaurant(name = "Holand Bakery", type = "Londo"),
+            Restaurant(name = "Angkringan", type = "Java"),
+            Restaurant(name = "Olive", type = "Yogya"),
+            Restaurant(name = "Popeye", type = "Yogya Juga"),
+            Restaurant(name = "Bu Rem", type = "Yogya Juga")
         )
     }
 }
