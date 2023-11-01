@@ -7,22 +7,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include
-        layout="@layout/item_restaurant"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <include
-        layout="@layout/item_restaurant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <include
-        layout="@layout/item_restaurant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <include
-        layout="@layout/item_restaurant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
 
-
+        android:id="@+id/rv_restaurant"
+        tools:listitem="@layout/item_restaurant"
+        tools:itemCount="5"/>
 </LinearLayout>
