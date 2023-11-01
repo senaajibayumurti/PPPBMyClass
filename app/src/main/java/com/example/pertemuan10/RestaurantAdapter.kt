@@ -5,7 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pertemuan10.databinding.ItemRestaurantBinding
 
-class RestaurantAdapter() :
+typealias OnClickRestaurant = (Restaurant) -> Unit
+
+class RestaurantAdapter(private val listRestaurant: List<Restaurant>,
+                        private val onClickRestaurant: OnClickRestaurant) :
     RecyclerView.Adapter<RestaurantAdapter.ItemRestaurantViewHolder>() {
 
     inner class ItemRestaurantViewHolder(private val
@@ -13,6 +16,16 @@ class RestaurantAdapter() :
                                          binding: ItemRestaurantBinding):
             RecyclerView.ViewHolder(binding.root){
 
+                fun bind(data : Restaurant){
+                    with(binding){
+                        restoNameTxt.text = data.name
+                        restoTypeTxt.text = data.type
+
+                        itemView.setOnClickListener {
+                            onClickRestaurant(data)
+                        }
+                    }
+                }
             }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemRestaurantViewHolder {
@@ -22,10 +35,10 @@ class RestaurantAdapter() :
     }
 
     override fun getItemCount(): Int {
-        return 5
+        return listRestaurant.size
     }
 
     override fun onBindViewHolder(holder: ItemRestaurantViewHolder, position: Int) {
-
+        holder.bind(listRestaurant[position])
     }
 }

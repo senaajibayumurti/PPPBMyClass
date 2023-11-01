@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/resto_name_txt"
         android:layout_below="@id/resto_name_txt"
-        android:layout_marginLeft="20dp"
 
+        android:id="@+id/resto_type_txt"
         android:text="Resto Type"
         android:textSize="16dp"/>
 

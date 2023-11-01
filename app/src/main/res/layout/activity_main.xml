@@ -13,5 +13,5 @@
 
         android:id="@+id/rv_restaurant"
         tools:listitem="@layout/item_restaurant"
-        tools:itemCount="5"/>
+        tools:itemCount="7"/>
 </LinearLayout>
