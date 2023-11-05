@@ -1,15 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Pertemuan10" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Pertemuan10" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/black_2</item>
         <item name="colorPrimaryVariant">@color/black_1</item>
         <item name="colorOnPrimary">@color/grey</item>
         <item name="android:background">@color/black_2</item>
         <!--Font Set-Up-->
-        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
         <item name="android:textColor">@color/grey</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.Pertemuan10.WithActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/black_1</item>
+        <item name="colorPrimaryVariant">@color/black_1</item>
+        <item name="colorOnPrimary">@color/grey</item>
+        <item name="android:background">@color/black_2</item>
+        <!--Font Set-Up-->
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/grey</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
 </resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/black_3"
+
+        android:id="@+id/pfp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="24dp"
+
+        android:id="@+id/student_name_txt"
+        android:textColor="@color/gold"
+        android:text="Student Name"
+        android:textSize="24sp"
+
+        app:layout_constraintStart_toEndOf="@+id/pfp"
+        app:layout_constraintTop_toTopOf="@+id/pfp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="24dp"
+
+        android:id="@+id/student_major_txt"
+        android:text="Major"
+        android:textSize="16sp"
+
+        app:layout_constraintTop_toBottomOf="@id/student_name_txt"
+        app:layout_constraintStart_toEndOf="@+id/pfp" />
+
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:paddingHorizontal="8dp"
+
+        android:id="@+id/student_gpa_txt"
+        android:fontFamily="@font/poppins_bold"
+        android:text="0.0"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/student_name_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/student_name_txt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
